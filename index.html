@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asslyn - Visit Dubai | Luxury Tours & Premium Services</title>
+    <meta name="description" content="Experience the magic of Dubai with Asslyn. Luxury tours, yacht charters, desert safaris, and premium travel services.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Sadece Poppins - normal, yumuşak font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>ASSLYN</h1>
+                    <span class="logo-subtitle">Visit Dubai</span>
+                </div>
+                
+                <nav id="nav" class="nav">
+                    <a href="#home" class="nav-link" data-translate="nav.home">Home</a>
+                    <a href="#services" class="nav-link" data-translate="nav.services">Services</a>
+                    <a href="#pricing" class="nav-link" data-translate="nav.pricing">Pricing</a>
+                    <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+                    <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="tr">TR</button>
+                        <button class="lang-btn" data-lang="ar">AR</button>
+                    </div>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="public/dubai-skyline-at-sunset-with-burj-khalifa.jpg" alt="Dubai Skyline">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-translate="hero.title">Experience the Magic of Dubai</h1>
+                <p class="hero-subtitle" data-translate="hero.subtitle">Luxury Tours & Premium Services</p>
+                <p class="hero-description" data-translate="hero.description">Your gateway to unforgettable Dubai adventures. From desert safaris to yacht tours, we create memories that last a lifetime.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary" data-translate="hero.cta">Explore Services</a>
+                    <a href="#contact" class="btn btn-secondary" data-translate="hero.ctaSecondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Services</span>
+                <h2 class="section-title" data-translate="services.title">Our Premium Services</h2>
+                <p class="section-subtitle" data-translate="services.subtitle">Curated experiences for the discerning traveler</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Visa Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/dubai-visa-passport-travel-documents.jpg" alt="Dubai Visa">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title" data-translate="services.visa.title">Dubai Visa & Travel</h3>
+                        <p class="service-description" data-translate="services.visa.description">Hassle-free visa processing and travel arrangements to Dubai.</p>
+                        <button class="service-link" onclick="openModal('visa')">Learn More →</button>
+                    </div>
+                </div>
+
+                <!-- Jetski Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/jetski-adventure-in-dubai-waters.jpg" alt="Jetski Adventure">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title" data-translate="services.jetski.title">Jetski Adventures</h3>
+                        <p class="service-description" data-translate="services.jetski.description">Feel the adrenaline rush as you ride the waves of the Arabian Gulf.</p>
+                        <button class="service-link" onclick="openModal('jetski')">Learn More →</button>
+                    </div>
+                </div>
+
+                <!-- Yacht Service -->
+                <div class="service-card featured">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-image">
+                        <img src="public/luxury-yacht-in-dubai-marina.jpg" alt="Luxury Yacht">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title" data-translate="services.yacht.title">Luxury Yacht Tours</h3>
+                        <p class="service-description" data-translate="services.yacht.description">Cruise the Dubai coastline in style with stunning views.</p>
+                        <button class="service-link" onclick="openModal('yacht')">Learn More →</button>
+                    </div>
+                </div>
+
+                <!-- Safari Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/desert-safari-dubai-sand-dunes-sunset.jpg" alt="Desert Safari">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title" data-translate="services.safari.title">Desert Safari</h3>
+                        <p class="service-description" data-translate="services.safari.description">Experience the golden dunes with thrilling rides and entertainment.</p>
+                        <button class="service-link" onclick="openModal('safari')">Learn More →</button>
+                    </div>
+                </div>
+
+                <!-- Car Tours Service -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="public/luxury-car-tour-dubai-city.jpg" alt="Luxury Car Tours">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title" data-translate="services.car.title">Luxury Car Tours</h3>
+                        <p class="service-description" data-translate="services.car.description">Explore Dubai in comfort with private chauffeur-driven tours.</p>
+                        <button class="service-link" onclick="openModal('car')">Learn More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Pricing</span>
+                <h2 class="section-title" data-translate="pricing.title">Transparent Pricing</h2>
+                <p class="section-subtitle" data-translate="pricing.subtitle">Choose the perfect package for your Dubai adventure</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Visa Package -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="pricing-title" data-translate="services.visa.title">Dubai Visa & Travel</h3>
+                    <div class="pricing-price" data-translate="pricing.contact">Contact for Price</div>
+                    <ul class="pricing-features">
+                        <li>Tourist Visa Processing</li>
+                        <li>Express Service Available</li>
+                        <li>Document Assistance</li>
+                        <li>24/7 Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" data-translate="pricing.bookNow">Book Now</a>
+                </div>
+
+                <!-- Jetski Package -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="pricing-title" data-translate="services.jetski.title">Jetski Adventures</h3>
+                    <div class="pricing-price" data-translate="pricing.contact">Contact for Price</div>
+                    <ul class="pricing-features">
+                        <li>30-60 Minute Sessions</li>
+                        <li>Professional Instructor</li>
+                        <li>Safety Equipment Included</li>
+                        <li>Photo Package Available</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" data-translate="pricing.bookNow">Book Now</a>
+                </div>
+
+                <!-- Yacht Package (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Most Popular
+                    </div>
+                    <div class="pricing-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="pricing-title" data-translate="services.yacht.title">Luxury Yacht Tours</h3>
+                    <div class="pricing-price" data-translate="pricing.contact">Contact for Price</div>
+                    <ul class="pricing-features">
+                        <li>Private Yacht Charter</li>
+                        <li>Professional Crew</li>
+                        <li>Refreshments Included</li>
+                        <li>Flexible Duration</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" data-translate="pricing.bookNow">Book Now</a>
+                </div>
+
+                <!-- Safari Package -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="pricing-title" data-translate="services.safari.title">Desert Safari</h3>
+                    <div class="pricing-price" data-translate="pricing.contact">Contact for Price</div>
+                    <ul class="pricing-features">
+                        <li>Dune Bashing</li>
+                        <li>Camel Riding</li>
+                        <li>BBQ Dinner</li>
+                        <li>Traditional Entertainment</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" data-translate="pricing.bookNow">Book Now</a>
+                </div>
+
+                <!-- Car Tours Package -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="pricing-title" data-translate="services.car.title">Luxury Car Tours</h3>
+                    <div class="pricing-price" data-translate="pricing.contact">Contact for Price</div>
+                    <ul class="pricing-features">
+                        <li>Luxury Vehicle</li>
+                        <li>Professional Chauffeur</li>
+                        <li>Custom Itinerary</li>
+                        <li>All Attractions Covered</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" data-translate="pricing.bookNow">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <span class="section-label">About Us</span>
+                        <h2 class="section-title" data-translate="about.title">About Asslyn</h2>
+                    </div>
+                    <p class="about-description" data-translate="about.description">We are passionate about creating extraordinary Dubai experiences. With years of expertise and local knowledge, we ensure every journey is seamless, luxurious, and unforgettable.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Tour Packages</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="public/dubai-burj-al-arab-luxury-hotel.jpg" alt="Dubai Luxury">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title" data-translate="contact.title">Get in Touch</h2>
+                <p class="section-subtitle" data-translate="contact.subtitle">Ready to start your Dubai adventure?</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <h3 class="contact-form-title">Send us a message</h3>
+                    <p class="contact-form-subtitle">We'll get back to you within 24 hours</p>
+                    <form id="contact-form" class="contact-form">
+                        <input type="text" name="name" placeholder="Full Name" data-translate-placeholder="contact.name" required>
+                        <input type="email" name="email" placeholder="Email Address" data-translate-placeholder="contact.email" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" data-translate-placeholder="contact.phone" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" data-translate-placeholder="contact.message" required></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            <span data-translate="contact.send">Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22,6 12,13 2,6 22 2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-title" data-translate="contact.info">Contact Information</h3>
+                        <div class="contact-info-items">
+                            <a href="mailto:info@asslyndubai.com" class="contact-info-item">
+                                <div class="contact-info-icon email">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-info-label">Email</div>
+                                    <div class="contact-info-value">info@asslyndubai.com</div>
+                                </div>
+                            </a>
+                            <a href="tel:+971XXXXXXXXX" class="contact-info-item">
+                                <div class="contact-info-icon phone">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-info-label">Phone</div>
+                                    <div class="contact-info-value">+971 XX XXX XXXX</div>
+                                </div>
+                            </a>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon location">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="contact-info-label">Location</div>
+                                    <div class="contact-info-value">Dubai, UAE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social-card">
+                        <h3 class="contact-social-title" data-translate="contact.followUs">Follow Us</h3>
+                        <p class="contact-social-subtitle">Connect with us on social media</p>
+                        <div class="contact-social-links">
+                            <a href="https://wa.me/971XXXXXXXXX" target="_blank" class="social-link whatsapp">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="https://facebook.com/asslyndubai" target="_blank" class="social-link facebook">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://instagram.com/asslyndubai" target="_blank" class="social-link instagram">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384 1.079-1.079 1.335-1.636 1.384-2.126.297-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.585-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.421.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.65-.07-4.859-.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.81-.689-1.379-.898-.42-.166-1.051-.361-2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                </svg>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">ASSLYN</h3>
+                    <p class="footer-tagline" data-translate="footer.tagline">Your Gateway to Dubai</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" data-translate="nav.home">Home</a>
+                    <a href="#services" data-translate="nav.services">Services</a>
+                    <a href="#pricing" data-translate="nav.pricing">Pricing</a>
+                    <a href="#about" data-translate="nav.about">About</a>
+                    <a href="#contact" data-translate="nav.contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Asslyn. <span data-translate="footer.rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Modals -->
+    <div id="visa-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('visa')">&times;</button>
+            <div class="modal-header">
+                <h2>Dubai Visa & Travel Services</h2>
+            </div>
+            <div class="modal-body">
+                <img src="public/dubai-visa-passport-travel-documents.jpg" alt="Dubai Visa" class="modal-image">
+                <h3>Complete Visa Solutions</h3>
+                <p>We provide comprehensive visa services for tourists, business travelers, and families visiting Dubai. Our experienced team handles all documentation and processing.</p>
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Tourist visa (30 days / 90 days)</li>
+                    <li>Express processing available</li>
+                    <li>Document verification and assistance</li>
+                    <li>Travel insurance options</li>
+                    <li>Airport pickup arrangements</li>
+                    <li>24/7 customer support</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" onclick="closeModal('visa')">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="jetski-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('jetski')">&times;</button>
+            <div class="modal-header">
+                <h2>Jetski Adventures</h2>
+            </div>
+            <div class="modal-body">
+                <img src="public/jetski-adventure-in-dubai-waters.jpg" alt="Jetski" class="modal-image">
+                <h3>Thrilling Water Sports Experience</h3>
+                <p>Experience the thrill of riding a jetski across the crystal-clear waters of the Arabian Gulf. Perfect for adventure seekers and water sports enthusiasts.</p>
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>30 or 60-minute sessions</li>
+                    <li>Professional safety briefing</li>
+                    <li>All safety equipment provided</li>
+                    <li>Experienced instructor guidance</li>
+                    <li>Photo and video packages available</li>
+                    <li>Stunning views of Dubai coastline</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" onclick="closeModal('jetski')">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="yacht-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('yacht')">&times;</button>
+            <div class="modal-header">
+                <h2>Luxury Yacht Tours</h2>
+            </div>
+            <div class="modal-body">
+                <img src="public/luxury-yacht-in-dubai-marina.jpg" alt="Yacht" class="modal-image">
+                <h3>Premium Yacht Charter Experience</h3>
+                <p>Sail through Dubai's iconic coastline aboard our luxury yachts. Perfect for special occasions, corporate events, or a romantic getaway.</p>
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Private yacht charter (2-8 hours)</li>
+                    <li>Professional crew and captain</li>
+                    <li>Refreshments and catering options</li>
+                    <li>Water sports equipment</li>
+                    <li>Stunning views of Burj Al Arab, Palm Jumeirah</li>
+                    <li>Customizable routes and itineraries</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" onclick="closeModal('yacht')">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="safari-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('safari')">&times;</button>
+            <div class="modal-header">
+                <h2>Desert Safari Experience</h2>
+            </div>
+            <div class="modal-body">
+                <img src="public/desert-safari-dubai-sand-dunes-sunset.jpg" alt="Safari" class="modal-image">
+                <h3>Authentic Arabian Desert Adventure</h3>
+                <p>Immerse yourself in the beauty of the Arabian desert. Experience thrilling dune bashing, camel rides, and traditional entertainment under the stars.</p>
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Dune bashing in 4x4 vehicles</li>
+                    <li>Camel riding experience</li>
+                    <li>Traditional BBQ dinner</li>
+                    <li>Belly dancing and Tanoura shows</li>
+                    <li>Henna painting and shisha</li>
+                    <li>Sunset photography opportunities</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" onclick="closeModal('safari')">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="car-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('car')">&times;</button>
+            <div class="modal-header">
+                <h2>Luxury Car Tours</h2>
+            </div>
+            <div class="modal-body">
+                <img src="public/luxury-car-tour-dubai-city.jpg" alt="Car Tours" class="modal-image">
+                <h3>Premium Chauffeur-Driven Tours</h3>
+                <p>Explore Dubai's iconic landmarks and hidden gems in ultimate comfort. Our professional chauffeurs ensure a seamless and luxurious experience.</p>
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Luxury vehicle (Mercedes, BMW, or similar)</li>
+                    <li>Professional English-speaking chauffeur</li>
+                    <li>Customizable itinerary</li>
+                    <li>All major attractions covered</li>
+                    <li>Complimentary water and refreshments</li>
+                    <li>Flexible pickup and drop-off</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary" onclick="closeModal('car')">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
